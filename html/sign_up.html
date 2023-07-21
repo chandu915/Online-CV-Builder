@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/sign_up.css">
+<title> Sign Up</title>
+</head>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <div class="login">
+          <div class="login-header">
+            <h2>SIGN UP</h2>
+            <p>Online CV Builder</p>
+            <p class="error" id="error1"></p>
+          </div>
+        </div>
+        <form class="login-form" action="../php/sign_up_db.php" method="POST" onsubmit="return validate();">
+          <input type="mail" name="email" id="email" placeholder="Email*"/>
+          <input type="password" name="pwd" id="pwd" placeholder="Password*"/>
+          <input type="password" name="cpwd" id="cpwd" placeholder="Confirm Password*"/>
+          <div class="btn">
+          <button type="submit" name="submit-btn" >sign up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+
+<script>
+
+
+function validate(){
+
+  
+  var mail = document.getElementById("email").value;
+  let pwd = document.getElementById("pwd").value;
+  let cpwd = document.getElementById("cpwd").value;
+
+  var atposition = mail.indexOf("@");  
+  var dotposition = mail.lastIndexOf(".");  
+
+  if(mail==null || mail=="" || atposition<1 || dotposition < atposition+2 || dotposition+2 >= mail.length){
+    // alert("Email is empty!");
+    document.getElementById("error1").innerHTML = "<span class='error_msg'>Please enter a valid email address</span>";
+    document.getElementById("email").style.border = '1px solid #ce0000';
+    document.getElementById("pwd").style.border = 'none';
+    document.getElementById("cpwd").style.border = 'none';
+    return false;
+  }
+  else {
+    if (pwd==null || pwd=="" || pwd.length<6)
+  {
+    document.getElementById("error1").innerHTML = "<span class='error_msg'>Password must be 6 characters</span>";
+    document.getElementById("pwd").style.border = '1px solid #ce0000';
+    document.getElementById("email").style.border = 'none';
+    return false;
+  }
+
+  else{
+    if(pwd!=cpwd){
+      document.getElementById("error1").innerHTML = "<span class='error_msg'>Passwords must match</span>";
+    document.getElementById("pwd").style.border = '1px solid #ce0000';
+    document.getElementById("cpwd").style.border = '1px solid #ce0000';
+    document.getElementById("email").style.border = 'none';
+    return false;
+    }
+  }
+
+  }
+  
+  
+}
+
+</script>
+
+</html>
+
+
+
+
+
+

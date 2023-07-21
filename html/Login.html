@@ -1,0 +1,124 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../css/login.css">
+  <title> Login</title>
+</head>
+
+<body id="body">
+  <div style="opacity: 0;" id="loading"><span>LOADING...</span></div>
+    <div  class="login-page" id="login-page">
+      
+      <div class="form" id="form-main">
+        <div class="login">
+          <div class="login-header">
+            <h2>LOGIN</h2>
+            <p>Online CV Builder</p>
+            <p class="error" id="error1">
+            <p class="error" id="error1">
+            <!-- <?php
+              session_start();
+              if(!empty($_SESSION['msg'])){
+                echo "".$_SESSION['msg'];
+                unset($_SESSION['msg']);
+              }
+              ?> -->
+            </p>
+            </p>
+          </div>
+        </div>
+        <form class="login-form" id="customForm" method="POST" enctype="multipart/form-data">
+          <input type="text" name="uname" id="uname" placeholder="Username" />
+          <input type="password" name="pwd" id="pwd" placeholder="Password" />
+          <!-- <button type="submit" class="button" onclick="this.classList.toggle('button--loading')"><span class="button__text">loginx<span></button> -->
+          <button type="button" class="button" onclick="this.classList.toggle('button--loading')"><span class="button__text">Save</span></button>
+          <br><br>
+          <p class="message">Not registered? <a href="http://localhost/cv/php/sign_up.php">Create an account</a></p>
+        </form>
+        <button class="button" id="submit"><span class="button__text">loginx<span></button>
+        <button id="submit">SubmitForm</button>
+      </div>
+    </div>
+</body>
+
+
+<script>
+
+
+  function validate() {
+
+
+    var uname = document.getElementById("uname").value;
+    let pwd = document.getElementById("pwd").value;
+
+    if (uname == null || uname == "") {
+      document.getElementById("error1").innerHTML = "<span class='error_msg'>Please enter username</span>";
+      document.getElementById("uname").style.border = '2px solid #ce0000';
+      document.getElementById("pwd").style.border = 'none';
+      return false;
+    }
+    else {
+      if (pwd == null || pwd == "") {
+        document.getElementById("error1").innerHTML = "<span class='error_msg'>Please enter password</span>";
+        document.getElementById("pwd").style.border = '2px solid #ce0000';
+        document.getElementById("uname").style.border = 'none';
+        return false;
+      }
+
+
+
+    }
+
+  }
+
+  function submitForm() {
+        document.getElementById("customForm").submit()
+    }
+
+    // function change_(){
+    //   document.getElementById('submit').classList.toggle('button--loading');
+    // }
+
+    document.getElementById('submit').onclick = function() {
+      document.getElementById('body').style.backdropFilter = "blur(5px)";
+      document.getElementById('login-page').style.opacity = 0;
+      document.getElementById('loading').style.opacity = 1;
+      document.getElementById('loading').classList.toggle('button--loading');
+        setTimeout(submitForm, 3000); 
+    }
+
+</script>
+
+
+
+
+</html>
+
+<!-- <?php
+
+// date_default_timezone_set("Asia/Kolkata");
+// $date = date("h:i:s");
+
+// echo $date;
+
+// $uname = $_REQUEST["uname"];
+// $pwd = $_REQUEST["pwd"];
+
+// $uname = "chandu15";
+// $pwd = "12345@";
+
+// session_start();
+
+// if(isset($_SESSION['uname']))
+// {
+//   echo "<h1> Welcome ".$_SESSION['uname']."</h1>";
+// }
+
+// $mail = $_REQUEST["uname"];
+// echo $mail;
+
+
+?> -->
