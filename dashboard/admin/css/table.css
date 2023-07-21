@@ -1,0 +1,81 @@
+.container {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  flex-direction: column;
+}
+
+.row {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+}
+
+.tb th,
+.tb2 td {
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.tb-head {
+  padding: 10px 0 0 10px;
+  background: white;
+  width: auto;
+}
+
+.tb-body {
+  padding: 0 10px 20px 10px;
+  background: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  height: 500px;
+  width: auto;
+}
+
+table {
+  width: auto;
+  font-family: "Roboto", sans-serif;
+  border-collapse: collapse;
+}
+
+.tb2 tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+.tb2 tr:hover {
+  background-color: #ddd;
+}
+.tb th {
+  background-color: rgb(42, 42, 42);
+  color: white;
+}
+
+.reg {
+  width: 150px;
+  padding: 15px;
+  text-align: center;
+}
+
+.name {
+  width: 250px;
+}
+
+.adm-yr,
+.dob,
+.phn,
+.branch {
+  width: 130px;
+}
+
+.gender {
+  width: 90px;
+}
+
+.email {
+  width: 220px;
+}

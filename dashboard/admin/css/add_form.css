@@ -1,0 +1,96 @@
+.floating-label-input {
+  position: relative;
+  height: 60px;
+  width: 250px;
+  background: rgb(255, 255, 255);
+  border: 1px solid black;
+}
+.floating-label-input-x {
+  position: relative;
+  height: 60px;
+  width: 830px;
+  background: rgb(90,90,90);
+}
+.floating-label-input input {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  border: none;
+  outline: none;
+  vertical-align: middle;
+  font-size: 16px;
+  padding: 25px 10px 10px 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.floating-label-input label {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(15% - 15px);
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  transition: all 0.3s;
+  font-family: Arial;
+}
+
+.floating-label-input input:focus~label,
+.floating-label-input input:focus~label,
+.floating-label-input input:valid~label {
+  top: 10px;
+  left: 8px;
+  font-size: 11px;
+  font-weight: bold;
+  color: dodgerblue;
+  /* background: rgb(255, 255, 255); */
+  padding: 0 5px;
+}
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  flex-direction: row;
+}
+ .floating-label-input input {
+  transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 95%,
+    dodgerblue 5%
+  );
+  background-position: -250px 0;
+  background-size: 250px 100%;
+  background-repeat: no-repeat;
+  color: #000000;
+} 
+
+input:focus,
+input:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+}
+
+input::-webkit-input-placeholder {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus::-webkit-input-placeholder,
+input:valid::-webkit-input-placeholder {
+  color: dodgerblue;
+  font-size: 11px;
+  transform: translate(0px, -10px);
+  visibility: visible !important;
+}
+
+
+.floating-label-input input[type=date] {
+  color: transparent;
+}
+
+.floating-label-input input[type=date]:focus,
+.floating-label-input input:valid {
+  color: rgb(0, 0, 0);
+}

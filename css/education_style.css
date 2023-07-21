@@ -1,0 +1,268 @@
+#education {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      table 
+      { 
+          font-size: 85%;
+          width: 100%; 
+      } 
+#education td, #education th {
+        border: 1px solid #ddd;
+        padding: 8px 10px;
+      }
+      
+/* #education tr:nth-child(even){background-color: #f2f2f2;} */
+          
+#education th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        width: auto;
+        /* background-color: #04AA6D; */
+        background-color: #e8e8e8;
+        color: rgb(0, 0, 0);
+}
+
+
+article address.norm h4 
+{
+    font-size: 250%;
+    font-weight: bold;
+}
+
+article address.norm p 
+{
+    padding: 0;
+}
+article address.norm 
+{ 
+    float: left; 
+    font-size: 95%; 
+    font-style: normal; 
+    font-weight: normal; 
+    line-height: 0.8; 
+    margin: 0; 
+    background: transparent;
+    width: 100%;
+    text-align: right;
+    
+}
+
+header address 
+{ 
+    float: left; 
+    font-size: 95%; 
+    font-style: normal; 
+    line-height: 1; 
+    margin: 0 1em 1em 0; 
+}
+
+article address.norm h4 
+{
+    font-size: 250%;
+    font-weight: bold;
+}
+
+
+article address.norm 
+{ 
+    float: left; 
+    font-size: 95%; 
+    font-style: normal; 
+    font-weight: normal; 
+    line-height: 0.8; 
+    margin: 0; 
+    background: transparent;
+    width: 100%;
+    text-align: right;
+    
+}
+
+/* #cv_main
+{ 
+    display: flex;
+    height: 11.693in; 
+    margin: 0 auto; 
+    width: 8.268in; 
+    background: #FFF;  
+    border-radius: 1px; 
+    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+} */
+
+#cv
+{ 
+    box-sizing: border-box; 
+    height: auto; 
+    margin: 0 auto; 
+    overflow: hidden; 
+    padding: 0.5in; 
+    width: 8.268in; 
+    background: #FFF;  
+    border-radius: 1px; 
+    box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+}
+
+#headx
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  #007bc7;
+    border-radius: 0.25em; 
+    color: #FFF; 
+    margin: 0 0 0.5em 0; 
+    height: 30px;
+    text-align: center; 
+
+}
+
+h1 
+{ 
+    font: bold 100% sans-serif; 
+    letter-spacing: 0.1em; 
+    text-align: center; 
+    text-transform: uppercase; 
+}
+
+
+header 
+{ 
+    margin: 0 0 0 0; 
+    background-color: transparent;
+}
+
+/* header:after 
+{ 
+    clear: both; 
+    content: ""; 
+    display: table; 
+} */
+
+header address 
+{ 
+    float: left; 
+    font-size: 95%; 
+    font-style: normal; 
+    line-height: 1; 
+    margin: 0 1em 1em 0; 
+}
+
+article address.details h4 
+{
+    font-size: 250%;
+    font-weight: bold;
+}
+
+article address.details p 
+{
+    padding: 0;
+}
+
+
+article address.details 
+{ 
+    float: left; 
+    font-size: 95%; 
+    font-style: normal; 
+    font-weight: normal; 
+    line-height: 0.8; 
+    margin: 0; 
+    background: transparent;
+    width: 100%;
+    text-align: right;
+}
+
+header address p 
+{ 
+    margin: 0 0 0.1em; 
+}
+
+article h1 
+{ 
+    clip: rect(0 0 0 0); 
+    position: absolute; 
+}
+
+header span, header img 
+{
+    display: block; 
+    float: right; 
+}
+header span 
+{
+    margin: 0 0 1em; 
+    max-height: 25%; 
+    max-width: 60%; 
+    position: relative; 
+}
+header img 
+{
+    max-height: 100%; 
+    max-width: 100%; 
+}
+header input 
+{ 
+    cursor: pointer; 
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 
+    height: 100%; 
+    left: 0; 
+    opacity: 0; 
+    position: absolute; 
+    top: 0; 
+    width: 100%; 
+}
+
+
+article, article address, table.meta, table.inventory 
+{ 
+    margin: 0 0 1em; 
+}
+article:after 
+{ 
+    clear: both; 
+    content: ""; 
+    display: table; 
+}
+article h1 
+{ 
+    clip: rect(0 0 0 0); 
+    position: absolute; 
+}
+
+article address 
+{ 
+    float: left; 
+    font-size: 125%; 
+    font-weight: bold; 
+}
+
+
+@media print 
+{
+    * { -webkit-print-color-adjust: exact; }
+    html { background: none; padding: 0; }
+    body { box-shadow: none; margin: 0; }
+    span:empty { display: none; }
+    .add, .cut { display: none; }
+}
+
+@page { margin: 0; }
+
+
+.butt{
+    background-color: #009dff;
+    color:white;
+    border:none;
+    font-size:15px;
+    padding: 1em 4em 1em 4em;
+    border-radius:10px;
+    }
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+}
